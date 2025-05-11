@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standard_5">5dp</dimen>
+    <dimen name="standard_10">10dp</dimen>
+    <dimen name="standard_20">20dp</dimen>
+    <dimen name="standard_0">0dp</dimen>
+    <dimen name="product_image_height">280dp</dimen>
+    <dimen name="standard_3">3dp</dimen>
+    <dimen name="standard_16">16dp</dimen>
+    <dimen name="button_padding">62dp</dimen>
+</resources>

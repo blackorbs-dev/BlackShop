@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextInputField">
+        <attr name="hintText" format="string"/>
+        <attr name="inputType" format="enum">
+            <enum name="text" value="1"/>
+            <enum name="textEmailAddress" value="2"/>
+            <enum name="textPassword" value="3"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="PrimaryButton">
+        <attr name="text" format="string"/>
+        <attr name="icon" format="reference"/>
+    </declare-styleable>
+</resources>

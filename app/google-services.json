@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "167335043705",
+    "project_id": "blackshop-6a048",
+    "storage_bucket": "blackshop-6a048.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167335043705:android:c4b5ff9ae731ef51a5eaa8",
+        "android_client_info": {
+          "package_name": "blackorbs.dev.blackshop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAteZRgUqXTjXNhKEsMTaxd_iSAF2nmMaI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

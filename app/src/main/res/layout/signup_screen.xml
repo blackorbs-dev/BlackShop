@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:orientation="vertical"
+    android:background="@color/surfaceColor"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/textSignupTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_account"
+        android:textAppearance="?attr/textAppearanceTitleLarge"
+        android:textColor="@color/primaryColor"
+        android:layout_marginBottom="32dp"/>
+
+    <blackorbs.dev.blackshop.ui.components.TextInputField
+        android:id="@+id/fullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintText="@string/full_name"
+        app:inputType="text"/>
+
+    <blackorbs.dev.blackshop.ui.components.TextInputField
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintText="@string/email"
+        app:inputType="textEmailAddress"/>
+
+    <blackorbs.dev.blackshop.ui.components.TextInputField
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintText="@string/password"
+        app:inputType="textPassword"/>
+
+    <blackorbs.dev.blackshop.ui.components.TextInputField
+        android:id="@+id/confirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintText="@string/confirm_password"
+        app:inputType="textPassword"/>
+
+    <blackorbs.dev.blackshop.ui.components.PrimaryButton
+        android:id="@+id/action_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:text="@string/sign_up"
+        android:layout_marginTop="@dimen/standard_10"
+        android:layout_marginBottom="@dimen/standard_20"/>
+
+    <TextView
+        android:id="@+id/goToLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/goto_login"
+        android:textColor="@color/textSecondary"
+        android:textSize="14sp"
+        android:layout_gravity="center"/>
+</LinearLayout>

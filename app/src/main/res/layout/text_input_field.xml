@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textfield.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/inputLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:boxBackgroundMode="outline"
+    app:boxStrokeColor="@color/primaryColor"
+    app:boxCornerRadiusBottomStart="@dimen/standard_16"
+    app:boxCornerRadiusTopEnd="@dimen/standard_16"
+    app:boxCornerRadiusTopStart="@dimen/standard_0"
+    app:boxCornerRadiusBottomEnd="@dimen/standard_0"
+    android:layout_marginVertical="@dimen/standard_5">
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</com.google.android.material.textfield.TextInputLayout>

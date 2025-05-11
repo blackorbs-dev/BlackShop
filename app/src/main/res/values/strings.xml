@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">BlackShop</string>
+    <string name="product_image">Product Image</string>
+    <string name="description">Description</string>
+    <string name="products_listing">Products Listing</string>
+    <string name="error_try_again">Some error occurred, check your internet connection and try again</string>
+    <string name="retry">RETRY</string>
+    <string name="rating_count">(%1$d ratings)</string>
+    <string name="details">Details</string>
+    <string name="add_cart">Add to Cart</string>
+    <string name="login">Login</string>
+    <string name="goto_sign_up">Don\'t have an account? Sign Up</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="create_account">Create Account</string>
+    <string name="full_name">Full Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="goto_login">Already have an account? Login</string>
+    <string name="all_products">All Products</string>
+    <string name="checkout">Checkout</string>
+    <string name="input_error">This field is required</string>
+    <string name="view_cart">View Cart</string>
+    <string name="delete">Delete</string>
+    <string name="button_okay">Done</string>
+    <string name="success">Success</string>
+    <string name="success_message">Your order has been placed</string>
+    <string name="no_cart_items">No items in your cart</string>
+    <string name="x1">x1</string>
+    <string name="total">Total:</string>
+</resources>

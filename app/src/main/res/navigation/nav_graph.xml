@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginScreen">
+
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="blackorbs.dev.blackshop.ui.login.LoginScreen"
+        android:label="@string/login"
+        tools:layout="@layout/login_screen">
+        <action
+            android:id="@+id/login_to_signup"
+            app:destination="@id/signupScreen"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/login_to_productList"
+            app:destination="@id/listScreen"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/loginScreen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signupScreen"
+        android:name="blackorbs.dev.blackshop.ui.signup.SignUpScreen"
+        android:label="@string/sign_up"
+        tools:layout="@layout/signup_screen">
+        <action
+            android:id="@+id/signup_to_productList"
+            app:destination="@id/listScreen"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/loginScreen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listScreen"
+        android:name="blackorbs.dev.blackshop.ui.product_list.ProductListScreen"
+        android:label="@string/all_products"
+        tools:layout="@layout/product_list_screen">
+        <action
+            android:id="@+id/list_to_details"
+            app:destination="@id/detailsScreen"
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/list_to_checkout"
+            app:destination="@id/checkoutScreen"
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailsScreen"
+        android:name="blackorbs.dev.blackshop.ui.product_details.ProductDetailsScreen"
+        android:label="@string/details"
+        tools:layout="@layout/product_details_screen">
+        <argument
+            android:name="productID"
+            app:argType="integer"/>
+        <action
+            android:id="@+id/details_to_checkout"
+            app:destination="@id/checkoutScreen"
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/checkoutScreen"
+        android:name="blackorbs.dev.blackshop.ui.cart.CheckoutScreen"
+        android:label="@string/checkout"
+        tools:layout="@layout/checkout_screen">
+    </fragment>
+</navigation>

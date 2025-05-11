@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <include
+        android:id="@+id/toolbar_container"
+        layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_container"
+        android:paddingBottom="@dimen/button_padding">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/standard_10"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardViewStyle"
+                android:layout_height="@dimen/product_image_height"
+                android:paddingHorizontal="@dimen/standard_10">
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/standard_10"
+                    android:scaleType="fitCenter"
+                    tools:src="@drawable/placeholder"
+                    android:contentDescription="@string/product_image" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardViewStyle">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/standard_10"
+                    android:layout_marginHorizontal="@dimen/standard_16">
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                    <include
+                        android:id="@+id/title_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/horizontal_divider"
+                        android:layout_marginTop="@dimen/standard_10"
+                        app:layout_constraintTop_toBottomOf="@+id/title"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:layout_marginTop="@dimen/standard_10"
+                        tools:text="$150,000"
+                        app:layout_constraintTop_toBottomOf="@+id/title_divider" />
+                    <RatingBar
+                        android:id="@+id/rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:max="5"
+                        tools:rating="4.5"
+                        android:layout_marginTop="@dimen/standard_10"
+                        android:progressTint="@color/accentColor"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/price" />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/rating_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="(1 ratings)"
+                        android:textAppearance="?attr/textAppearanceTitleSmall"
+                        android:layout_marginStart="@dimen/standard_5"
+                        app:layout_constraintStart_toEndOf="@+id/rating"
+                        app:layout_constraintBottom_toBottomOf="@+id/rating"
+                        app:layout_constraintTop_toTopOf="@+id/rating"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardViewStyle">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/standard_10"
+                    android:layout_marginHorizontal="@dimen/standard_16"
+                    android:orientation="vertical">
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/description"
+                        android:textStyle="bold"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"/>
+                    <include
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/horizontal_divider"
+                        android:layout_marginTop="@dimen/standard_10"
+                        app:layout_constraintTop_toBottomOf="@+id/title"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/standard_10"
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        tools:text="Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+    <blackorbs.dev.blackshop.ui.components.PrimaryButton
+        android:id="@+id/action_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/standard_20"
+        android:layout_marginBottom="@dimen/standard_10"
+        app:icon="@drawable/ic_add_cart_round_24"
+        app:text="@string/add_cart"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
